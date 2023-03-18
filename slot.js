@@ -195,7 +195,8 @@ spinButton.onclick = function() {
                 win += 300;
                 break;
             case "new baby":
-                win += 200;
+                //document.getElementById("outcome").innerHTML = "New Baby Name"  .......uncomment this for baby gender name
+                win += 200; // comment this out for baby gender name
                 break;
             case "nala":
                 win += 100;
@@ -207,7 +208,7 @@ spinButton.onclick = function() {
                 win += 75;
                 break;
         }
-        document.getElementById("outcome").innerHTML = `YOU WIN ${win}!!!`
+        document.getElementById("outcome").innerHTML = `YOU WIN ${win}!!!` //comment this out for baby gender game
     } else if (reelOneOutcome === "pizza" || reelTwoOutcome === "pizza" || reelThreeOutcome === "pizza") {
         if (reelOneOutcome === "pizza") {
             win += 10
