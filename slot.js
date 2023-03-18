@@ -220,6 +220,6 @@ spinButton.onclick = function() {
         };
         document.getElementById("outcome").innerHTML = `YOU WIN ${win}!!!`
     } else {
-        document.getElementById("outcome").innerHTML = "try again"
+        document.getElementById("outcome").innerHTML = "Try Again"
     }
 }
