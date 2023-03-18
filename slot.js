@@ -5,7 +5,7 @@ const reelThree = document.getElementById("reelThree");
 const outcome = document.getElementById("outcome");
 
 const spinReel = () => {
-   let randomNumber = Math.floor(Math.random()*7);
+   let randomNumber = Math.floor(Math.random()*4);
    switch (randomNumber) {
     case 0:
         return "andy";
@@ -45,9 +45,110 @@ spinButton.onclick = function() {
     const reelOneOutcome = spinReel();
     const reelTwoOutcome = spinReel();
     const reelThreeOutcome = spinReel();
-    reelOne.innerHTML = reelOneOutcome;
+
+
+    switch (reelOneOutcome) {
+        case "andy":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "kelly":
+            reelOne.innerHTML = '<img src="./kelly.png">';
+            break;
+        case "ryder":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "new baby":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "nala":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "mufasa":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "pizza":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "games":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "chainsaw":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "fairy":
+            reelOne.innerHTML = '<img src="./andy.jpg">';
+            break;
+    };
+    switch (reelTwoOutcome) {
+        case "andy":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "kelly":
+            reelTwo.innerHTML = '<img src="./kelly.png">';
+            break;
+        case "ryder":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "new baby":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "nala":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "mufasa":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "pizza":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "games":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "chainsaw":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "fairy":
+            reelTwo.innerHTML = '<img src="./andy.jpg">';
+            break;
+    };
+    switch (reelThreeOutcome) {
+        case "andy":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "kelly":
+            reelThree.innerHTML = '<img src="./kelly.png">';
+            break;
+        case "ryder":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "new baby":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "nala":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "mufasa":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "pizza":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "games":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "chainsaw":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+        case "fairy":
+            reelThree.innerHTML = '<img src="./andy.jpg">';
+            break;
+    };
+
+    /*reelOne.innerHTML = reelOneOutcome;
     reelTwo.innerHTML = reelTwoOutcome;
-    reelThree.innerHTML = reelThreeOutcome;
+    reelThree.innerHTML = reelThreeOutcome;*/
+
+
     if (reelOneOutcome === reelTwoOutcome && reelTwoOutcome === reelThreeOutcome) {
         switch (reelOneOutcome) {
             case "andy":
@@ -88,4 +189,3 @@ spinButton.onclick = function() {
         document.getElementById("outcome").innerHTML = "try again"
     }
 }
-
