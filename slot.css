@@ -1,9 +1,9 @@
 .reel {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 300px;
     border: 1px solid black;
     display: inline-block;
-    margin-top: 400px;
+    margin-top: 200px;
     margin-left: 300px;
     overflow: hidden;
 }
