@@ -53,7 +53,7 @@ spinButton.onclick = function() {
             document.getElementById("andyPic1").style.width = "100%";
             break;
         case "kelly":
-            reelOne.innerHTML = '<img id="kellyPic1" src="./kelly.png">';
+            reelOne.innerHTML = '<img id="kellyPic1" src="./kelly.jpg">';
             document.getElementById("kellyPic1").style.width = "100%";
             break;
         case "ryder":
@@ -97,7 +97,7 @@ spinButton.onclick = function() {
             document.getElementById("andyPic2").style.width = "100%";
             break;
         case "kelly":
-            reelTwo.innerHTML = '<img id="kellyPic2" src="./kelly.png">';
+            reelTwo.innerHTML = '<img id="kellyPic2" src="./kelly.jpg">';
             document.getElementById("kellyPic2").style.width = "100%";
             break;
         case "ryder":
@@ -141,7 +141,7 @@ spinButton.onclick = function() {
             document.getElementById("andyPic3").style.width = "100%";
             break;
         case "kelly":
-            reelThree.innerHTML = '<img id="kellyPic3" src="./kelly.png">';
+            reelThree.innerHTML = '<img id="kellyPic3" src="./kelly.jpg">';
             document.getElementById("kellyPic3").style.width = "100%";
             break;
         case "ryder":
