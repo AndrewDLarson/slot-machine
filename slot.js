@@ -3,6 +3,9 @@ const reelOne = document.getElementById("reelOne");
 const reelTwo = document.getElementById("reelTwo");
 const reelThree = document.getElementById("reelThree");
 const outcome = document.getElementById("outcome");
+const creditsBlock = document.getElementById("credits");
+let credits = 10;
+creditsBlock.innerHTML = `${credits}`
 
 const spinReel = () => {
    let randomNumber = Math.floor(Math.random()*7);
@@ -41,186 +44,203 @@ const spinReel = () => {
 }
 
 spinButton.onclick = function() {
+    
     let win = 0;
+    credits -= 1;
     const reelOneOutcome = spinReel();
     const reelTwoOutcome = spinReel();
     const reelThreeOutcome = spinReel();
 
-
-    switch (reelOneOutcome) {
-        case "andy":
-            reelOne.innerHTML = '<img id="andyPic1" src="./andy.jpg">';
-            document.getElementById("andyPic1").style.width = "100%";
-            break;
-        case "kelly":
-            reelOne.innerHTML = '<img id="kellyPic1" src="./kelly.jpg">';
-            document.getElementById("kellyPic1").style.width = "100%";
-            break;
-        case "ryder":
-            reelOne.innerHTML = '<img id="ryderPic1" src="./ryder.jpg">';
-            document.getElementById("ryderPic1").style.width = "100%";
-            break;
-        case "new baby":
-            reelOne.innerHTML = '<img id="newBabyPic1" src="./newBaby.jpg">';
-            document.getElementById("newBabyPic1").style.width = "100%";
-            break;
-        case "nala":
-            reelOne.innerHTML = '<img id="nalaPic1" src="./nala.jpg">';
-            document.getElementById("nalaPic1").style.width = "100%";
-            break;
-        case "mufasa":
-            reelOne.innerHTML = '<img id="fasPic1" src="./fas.jpg">';
-            document.getElementById("fasPic1").style.width = "100%";
-            break;
-        case "pizza":
-            reelOne.innerHTML = '<img id="pizzaPic1" src="./pizza.jpg">';
-            document.getElementById("pizzaPic1").style.width = "100%";
-            break;
-        /*case "games":
-            reelOne.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;
-        case "chainsaw":
-            reelOne.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;
-        case "fairy":
-            reelOne.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;*/
-    };
-
-
-    switch (reelTwoOutcome) {
-        case "andy":
-            reelTwo.innerHTML = '<img id="andyPic2" src="./andy.jpg">';
-            document.getElementById("andyPic2").style.width = "100%";
-            break;
-        case "kelly":
-            reelTwo.innerHTML = '<img id="kellyPic2" src="./kelly.jpg">';
-            document.getElementById("kellyPic2").style.width = "100%";
-            break;
-        case "ryder":
-            reelTwo.innerHTML = '<img id="ryderPic2" src="./ryder.jpg">';
-            document.getElementById("ryderPic2").style.width = "100%";
-            break;
-        case "new baby":
-            reelTwo.innerHTML = '<img id="newBabyPic2" src="./newBaby.jpg">';
-            document.getElementById("newBabyPic2").style.width = "100%";
-            break;
-        case "nala":
-            reelTwo.innerHTML = '<img id="nalaPic2" src="./nala.jpg">';
-            document.getElementById("nalaPic2").style.width = "100%";
-            break;
-        case "mufasa":
-            reelTwo.innerHTML = '<img id="fasPic2" src="./fas.jpg">';
-            document.getElementById("fasPic2").style.width = "100%";
-            break;
-        case "pizza":
-            reelTwo.innerHTML = '<img id="pizzaPic2" src="./pizza.jpg">';
-            document.getElementById("pizzaPic2").style.width = "100%";
-            break;
-        /*case "games":
-            reelTwo.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;
-        case "chainsaw":
-            reelTwo.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;
-        case "fairy":
-            reelTwo.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;*/
-    };
-
-
-    switch (reelThreeOutcome) {
-        case "andy":
-            reelThree.innerHTML = '<img id="andyPic3" src="./andy.jpg">';
-            document.getElementById("andyPic3").style.width = "100%";
-            break;
-        case "kelly":
-            reelThree.innerHTML = '<img id="kellyPic3" src="./kelly.jpg">';
-            document.getElementById("kellyPic3").style.width = "100%";
-            break;
-        case "ryder":
-            reelThree.innerHTML = '<img id="ryderPic3" src="./ryder.jpg">';
-            document.getElementById("ryderPic3").style.width = "100%";
-            break;
-        case "new baby":
-            reelThree.innerHTML = '<img id="newBabyPic3" src="./newBaby.jpg">';
-            document.getElementById("newBabyPic3").style.width = "100%";
-            break;
-        case "nala":
-            reelThree.innerHTML = '<img id="nalaPic3" src="./nala.jpg">';
-            document.getElementById("nalaPic3").style.width = "100%";
-            break;
-        case "mufasa":
-            reelThree.innerHTML = '<img id="fasPic3" src="./fas.jpg">';
-            document.getElementById("fasPic3").style.width = "100%";
-            break;
-        case "pizza":
-            reelThree.innerHTML = '<img id="pizzaPic3" src="./pizza.jpg">';
-            document.getElementById("pizzaPic3").style.width = "100%";
-            break;
-        /*case "games":
-            reelThree.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;
-        case "chainsaw":
-            reelThree.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;
-        case "fairy":
-            reelThree.innerHTML = '<img src="./andy.jpg">';
-            document.getElementById("kellyPic").style.width = "100%";
-            break;*/
-    };
-
-    /*reelOne.innerHTML = reelOneOutcome;
-    reelTwo.innerHTML = reelTwoOutcome;
-    reelThree.innerHTML = reelThreeOutcome;*/
-
-
-    if (reelOneOutcome === reelTwoOutcome && reelTwoOutcome === reelThreeOutcome) {
+    if (credits >= 0) {
         switch (reelOneOutcome) {
             case "andy":
-                win += 500;
+                reelOne.innerHTML = '<img id="andyPic1" src="./andy.jpg">';
+                document.getElementById("andyPic1").style.width = "100%";
                 break;
             case "kelly":
-                win += 400;
+                reelOne.innerHTML = '<img id="kellyPic1" src="./kelly.jpg">';
+                document.getElementById("kellyPic1").style.width = "100%";
                 break;
             case "ryder":
-                win += 300;
+                reelOne.innerHTML = '<img id="ryderPic1" src="./ryder.jpg">';
+                document.getElementById("ryderPic1").style.width = "100%";
                 break;
             case "new baby":
-                //document.getElementById("outcome").innerHTML = "New Baby Name"  .......uncomment this for baby gender name
-                win += 200; // comment this out for baby gender name
+                reelOne.innerHTML = '<img id="newBabyPic1" src="./newBaby.jpg">';
+                document.getElementById("newBabyPic1").style.width = "100%";
                 break;
             case "nala":
-                win += 100;
+                reelOne.innerHTML = '<img id="nalaPic1" src="./nala.jpg">';
+                document.getElementById("nalaPic1").style.width = "100%";
                 break;
             case "mufasa":
-                win += 100;
+                reelOne.innerHTML = '<img id="fasPic1" src="./fas.jpg">';
+                document.getElementById("fasPic1").style.width = "100%";
                 break;
             case "pizza":
-                win += 75;
+                reelOne.innerHTML = '<img id="pizzaPic1" src="./pizza.jpg">';
+                document.getElementById("pizzaPic1").style.width = "100%";
                 break;
-        }
-        document.getElementById("outcome").innerHTML = `YOU WIN ${win}!!!` //comment this out for baby gender game
-    } else if (reelOneOutcome === "pizza" || reelTwoOutcome === "pizza" || reelThreeOutcome === "pizza") {
-        if (reelOneOutcome === "pizza") {
-            win += 10
+            /*case "games":
+                reelOne.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;
+            case "chainsaw":
+                reelOne.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;
+            case "fairy":
+                reelOne.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;*/
         };
-        if (reelTwoOutcome === "pizza") {
-            win += 10
+
+
+        switch (reelTwoOutcome) {
+            case "andy":
+                reelTwo.innerHTML = '<img id="andyPic2" src="./andy.jpg">';
+                document.getElementById("andyPic2").style.width = "100%";
+                break;
+            case "kelly":
+                reelTwo.innerHTML = '<img id="kellyPic2" src="./kelly.jpg">';
+                document.getElementById("kellyPic2").style.width = "100%";
+                break;
+            case "ryder":
+                reelTwo.innerHTML = '<img id="ryderPic2" src="./ryder.jpg">';
+                document.getElementById("ryderPic2").style.width = "100%";
+                break;
+            case "new baby":
+                reelTwo.innerHTML = '<img id="newBabyPic2" src="./newBaby.jpg">';
+                document.getElementById("newBabyPic2").style.width = "100%";
+                break;
+            case "nala":
+                reelTwo.innerHTML = '<img id="nalaPic2" src="./nala.jpg">';
+                document.getElementById("nalaPic2").style.width = "100%";
+                break;
+            case "mufasa":
+                reelTwo.innerHTML = '<img id="fasPic2" src="./fas.jpg">';
+                document.getElementById("fasPic2").style.width = "100%";
+                break;
+            case "pizza":
+                reelTwo.innerHTML = '<img id="pizzaPic2" src="./pizza.jpg">';
+                document.getElementById("pizzaPic2").style.width = "100%";
+                break;
+            /*case "games":
+                reelTwo.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;
+            case "chainsaw":
+                reelTwo.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;
+            case "fairy":
+                reelTwo.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;*/
         };
-        if (reelThreeOutcome === "pizza") {
-            win += 10
+
+
+        switch (reelThreeOutcome) {
+            case "andy":
+                reelThree.innerHTML = '<img id="andyPic3" src="./andy.jpg">';
+                document.getElementById("andyPic3").style.width = "100%";
+                break;
+            case "kelly":
+                reelThree.innerHTML = '<img id="kellyPic3" src="./kelly.jpg">';
+                document.getElementById("kellyPic3").style.width = "100%";
+                break;
+            case "ryder":
+                reelThree.innerHTML = '<img id="ryderPic3" src="./ryder.jpg">';
+                document.getElementById("ryderPic3").style.width = "100%";
+                break;
+            case "new baby":
+                reelThree.innerHTML = '<img id="newBabyPic3" src="./newBaby.jpg">';
+                document.getElementById("newBabyPic3").style.width = "100%";
+                break;
+            case "nala":
+                reelThree.innerHTML = '<img id="nalaPic3" src="./nala.jpg">';
+                document.getElementById("nalaPic3").style.width = "100%";
+                break;
+            case "mufasa":
+                reelThree.innerHTML = '<img id="fasPic3" src="./fas.jpg">';
+                document.getElementById("fasPic3").style.width = "100%";
+                break;
+            case "pizza":
+                reelThree.innerHTML = '<img id="pizzaPic3" src="./pizza.jpg">';
+                document.getElementById("pizzaPic3").style.width = "100%";
+                break;
+            /*case "games":
+                reelThree.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;
+            case "chainsaw":
+                reelThree.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;
+            case "fairy":
+                reelThree.innerHTML = '<img src="./andy.jpg">';
+                document.getElementById("kellyPic").style.width = "100%";
+                break;*/
         };
-        document.getElementById("outcome").innerHTML = `YOU WIN ${win}!!!`
-    } else {
-        document.getElementById("outcome").innerHTML = "Try Again"
+
+        /*reelOne.innerHTML = reelOneOutcome;
+        reelTwo.innerHTML = reelTwoOutcome;
+        reelThree.innerHTML = reelThreeOutcome;*/
+
+
+        if (reelOneOutcome === reelTwoOutcome && reelTwoOutcome === reelThreeOutcome) {
+            switch (reelOneOutcome) {
+                case "andy":
+                    win += 100;
+                    credits += 100;
+                    break;
+                case "kelly":
+                    win += 75;
+                    credits += 75;
+                    break;
+                case "ryder":
+                    win += 50;
+                    credits += 50;
+                    break;
+                case "new baby":
+                    //document.getElementById("outcome").innerHTML = "New Baby Name"  .......uncomment this for baby gender name
+                    win += 50; // comment this out for baby gender name
+                    credits += 50;
+                    break;
+                case "nala":
+                    win += 25;
+                    credits += 25;
+                    break;
+                case "mufasa":
+                    win += 25;
+                    credits += 25;
+                    break;
+                case "pizza":
+                    win += 20;
+                    credits += 20;
+                    break;
+            }
+            document.getElementById("outcome").innerHTML = `YOU WIN ${win}!!!` //comment this out for baby gender game
+        } else if (reelOneOutcome === "pizza" || reelTwoOutcome === "pizza" || reelThreeOutcome === "pizza") {
+            if (reelOneOutcome === "pizza") {
+                win += 2;
+                credits += 2;
+            };
+            if (reelTwoOutcome === "pizza") {
+                win += 2;
+                credits += 2;
+            };
+            if (reelThreeOutcome === "pizza") {
+                win += 2;
+                credits += 2;
+            };
+            document.getElementById("outcome").innerHTML = `YOU WIN ${win}!!!`
+        } else {
+            document.getElementById("outcome").innerHTML = "Try Again"
+        };
+        creditsBlock.innerHTML = `${credits}`
     }
+    else {
+        document.getElementById("outcome").innerHTML = "Thanks for playing.";
+    };
 }
