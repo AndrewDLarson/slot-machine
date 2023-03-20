@@ -241,6 +241,6 @@ spinButton.onclick = function() {
         creditsBlock.innerHTML = `${credits}`
     }
     else {
-        document.getElementById("outcome").innerHTML = "Thanks for playing.";
+        document.getElementById("outcome").innerHTML = "No more Credits.";
     };
 }
